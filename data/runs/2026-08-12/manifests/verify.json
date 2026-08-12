@@ -1,0 +1,57 @@
+{
+  "chart_sha256": {
+    "importance.svg": "65ab2d05ff1f4728a38b4fd4a75cd2804e3f2c7330f87d3c26504ae1e282c929",
+    "sources.svg": "833ce3b0d5a1e0b86aead63e6fdc1b719154a2a3a1218b449d77fbe14c66a079",
+    "topics.svg": "63326a0d7cccb3ada1a5e958375bd1eeee21663cac694627bbdcb2a2a8dda657"
+  },
+  "checks": [
+    {
+      "count": 16,
+      "name": "all_evidence_is_literal",
+      "passed": true
+    },
+    {
+      "count": 16,
+      "name": "event_membership_is_complete",
+      "passed": true
+    },
+    {
+      "name": "cluster_facts_are_grounded",
+      "passed": true
+    },
+    {
+      "name": "report_sources_and_facts_are_known",
+      "passed": true
+    },
+    {
+      "name": "deep_analysis_and_four_trends_exist",
+      "passed": true
+    },
+    {
+      "name": "coverage_counts_balance",
+      "passed": true
+    },
+    {
+      "name": "rendered_top_events_and_sources_exist",
+      "passed": true
+    },
+    {
+      "count": 3,
+      "name": "charts_are_populated_svg",
+      "passed": true
+    }
+  ],
+  "event_count": 15,
+  "event_sha256": "9b76b707ea6590ce05b4c3065e70a6d5aaaafb9041f2441dfee41fda5c03e8e2",
+  "html_sha256": "a491e99bae17ac300047bf27813e4a412894e6dc65a9377dd00ec7cbb3c62cb0",
+  "insight_count": 16,
+  "insight_sha256": "b4a4643b1a5a164e4d612f228b4ddf7d37807c8f9c5181b11d3682d8d84d0bfb",
+  "item_count": 16,
+  "markdown_sha256": "80b919e68cdddc9aaf5532bf33d8bbea778b08db8e86870a8039507ab6c019ab",
+  "passed": true,
+  "raw_sha256": "60b73354bc5ad7d2d1238cf336893ab0c7df0c44b44c849ee95a86c607592931",
+  "report_json_sha256": "d5996c194c9c893f020647b97e24fdb7780fe380e165f48d12df4c2e369eec08",
+  "schema_version": "1.1",
+  "stage": "verify",
+  "top_event_count": 5
+}

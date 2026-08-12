@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 舆情分析日报 · 2026-08-12</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#64708a; --line:#e4e8f1; --blue:#5078e8; --paper:#fff; --bg:#f4f6fb; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif; }
+    main { width:min(1040px,calc(100% - 32px)); margin:32px auto; }
+    header,.card { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:28px; margin:18px 0; box-shadow:0 8px 30px rgba(34,48,82,.06); }
+    h1 { margin:.1em 0; font-size:clamp(28px,5vw,48px); line-height:1.15; }
+    h2 { margin-top:0; }
+    h3 { margin-bottom:.35em; }
+    .meta,.sources,.facts,.note { color:var(--muted); font-size:14px; }
+    .score { display:inline-block; background:#eef2ff; color:#3657b5; border-radius:999px; padding:2px 10px; }
+    .chart svg { width:100%; height:auto; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    a { color:#365fd6; }
+    ul { padding-left:1.3em; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+    .grid .card { margin:0; }
+    .evidence-overview { color:var(--muted); font-size:14px; margin:.6em 0 .35em; }
+    .evidence-details { border:1px solid var(--line); border-radius:12px; background:#fafbfe; margin:.35em 0 1.2em; }
+    .evidence-details summary { color:#3657b5; cursor:pointer; font-weight:600; padding:10px 14px; }
+    .evidence-body { border-top:1px solid var(--line); padding:4px 14px 12px; }
+    .evidence-body h4 { margin:.9em 0 .25em; }
+    .audit-list { margin:.25em 0; padding-left:1.3em; }
+    .audit-list li { margin:.45em 0; }
+    .audit-id { color:var(--muted); font-size:12px; margin-left:.4em; }
+    .fact-claim { display:block; margin-top:.15em; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="meta">DAILY AI INSIGHT · 2026-08-12</p>
+    <h1>AI 舆情分析日报 · 2026-08-12</h1>
+    <p>本期AI情报围绕网络安全、模型能力与治理三大主线展开。OpenAI在扩展Daybreak受控访问并发布GPT-5.6-Cyber的同时，因内部评估无法排除Astra模型的关键网络安全能力而大幅扩大安全测试、放缓发布节奏，反映出前沿模型安全放行标准趋严；Google DeepMind亦以有限访问试点形式发布Gemini 3.5 Flash Cyber，凸显网络安全模型受控发布成为行业共识。模型侧呈现分化：编程与具身模型加速落地，GitHub Copilot推出降价73%的MAI-Code-1.1-Flash并新增按模型token成本明细，Google发布Gemini Robotics 2系列、Meta发布可本地运行的Muse Glimmer，OpenAI披露GPT-Live全双工语音架构。应用与生态侧，OpenAI承诺支持美国能源部Genesis Mission、Anthropic推出Claude for Teachers并投入千万加元于加拿大研究，国内甘肃电投发布电力大模型、腾讯云升级Agent Runtime。总体来看，前沿能力集中于少数头部厂商，而受控访问加治理约束正取代单纯发布成为网络安全类模型的通行策略。 本期覆盖 16 条信息，形成 15 个独立事件；语义字段由 deepseek:deepseek-chat 逐条抽取；所有结论均链接到来源 ID。有 0 条未通过质量门并被隔离，不进入趋势判断。</p>
+      <p class="evidence-overview">来源：OpenAI、Axios、Google DeepMind、GitHub Changelog、Associated Press、Anthropic、中新网甘肃、腾讯云开发者社区（12 篇） · 事实支持：14 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（12 篇来源，14 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">OpenAI — OpenAI expands Daybreak and introduces GPT-5.6-Cyber</a><code class="audit-id">news_006</code></li>
+        <li><a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">Axios — OpenAI slows Astra release work over critical cyber-capability concerns</a><code class="audit-id">news_003</code></li>
+        <li><a href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">Google DeepMind — Google introduces Gemini 3.5 Flash Cyber</a><code class="audit-id">news_010</code></li>
+        <li><a href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">GitHub Changelog — MAI-Code-1.1-Flash available in GitHub Copilot</a><code class="audit-id">news_001</code></li>
+        <li><a href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">GitHub Changelog — GitHub adds per-model token breakdowns to Copilot usage reports</a><code class="audit-id">news_002</code></li>
+        <li><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Google DeepMind — Gemini Robotics 2 brings whole-body intelligence to robots</a><code class="audit-id">news_005</code></li>
+        <li><a href="https://apnews.com/article/df8a4e7d7825470d09e8090367457c2c">Associated Press — Meta releases Muse Glimmer and outlines a broader open-model strategy</a><code class="audit-id">news_004</code></li>
+        <li><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">OpenAI — OpenAI explains the full-duplex architecture behind GPT-Live</a><code class="audit-id">news_008</code></li>
+        <li><a href="https://openai.com/index/advancing-the-next-era-of-national-science/">OpenAI — OpenAI commits AI access and funding to the US Genesis Mission</a><code class="audit-id">news_009</code></li>
+        <li><a href="https://www.anthropic.com/news/claude-for-teachers">Anthropic — Anthropic introduces Claude for Teachers</a><code class="audit-id">news_015</code></li>
+        <li><a href="https://www.gs.chinanews.com.cn/news/2026/07-29/394937.shtml">中新网甘肃 — 甘肃电投发布紫金驭能电力大模型</a><code class="audit-id">news_014</code></li>
+        <li><a href="https://developer.cloud.tencent.com/article/2710977">腾讯云开发者社区 — 腾讯云7月集中升级AI存储、Agent Runtime与开发者工具</a><code class="audit-id">news_012</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_006.fact_01</code><span class="fact-claim">OpenAI扩展了Daybreak项目，新增Blue和Red访问层级</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_02</code><span class="fact-claim">OpenAI向受信任的防御性研究人员推出了GPT-5.6-Cyber</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_003.fact_01</code><span class="fact-claim">Axios报道称OpenAI表示其内部评估无法排除即将推出的Astra模型存在关键网络安全能力</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_02</code><span class="fact-claim">OpenAI扩大了安全测试范围</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_010.fact_03</code><span class="fact-claim">由于该技术的双重用途性质，DeepMind 最初将通过有限访问试点提供该模型</span><a class="sources" href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">查看原始来源</a></li>
+        <li><code>news_001.fact_05</code><span class="fact-claim">模型与服务器效率使标价较 MAI-Code-1-Flash 降低 73%</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_002.fact_02</code><span class="fact-claim">报告现在展示输入、输出、缓存读取和缓存写入 token，以及每个模型消耗的 AI 积分。</span><a class="sources" href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">查看原始来源</a></li>
+        <li><code>news_005.fact_01</code><span class="fact-claim">Google DeepMind 发布了 Gemini Robotics 2、Gemini Robotics ER 2 和 Gemini Robotics On-Device 2 三个模型。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+        <li><code>news_004.fact_01</code><span class="fact-claim">Meta released the open-source Muse Glimmer model.</span><a class="sources" href="https://apnews.com/article/df8a4e7d7825470d09e8090367457c2c">查看原始来源</a></li>
+        <li><code>news_008.fact_01</code><span class="fact-claim">OpenAI将GPT-Live描述为全双工语音模型，可在同一时间进行聆听和说话。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+        <li><code>news_009.fact_02</code><span class="fact-claim">OpenAI committed 4 million dollars in Codex access for about 2,000 researchers</span><a class="sources" href="https://openai.com/index/advancing-the-next-era-of-national-science/">查看原始来源</a></li>
+        <li><code>news_015.fact_02</code><span class="fact-claim">The product gives verified US K-12 educators free access to premium Claude capabilities.</span><a class="sources" href="https://www.anthropic.com/news/claude-for-teachers">查看原始来源</a></li>
+        <li><code>news_014.fact_03</code><span class="fact-claim">模型已应用于光伏巡检、风光功率预测、负荷与电价预测、电力交易辅助决策和AI办公</span><a class="sources" href="https://www.gs.chinanews.com.cn/news/2026/07-29/394937.shtml">查看原始来源</a></li>
+        <li><code>news_012.fact_03</code><span class="fact-claim">文章称Agent Runtime正从基础可用走向生产级能力</span><a class="sources" href="https://developer.cloud.tencent.com/article/2710977">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details>
+    <p class="meta">16 条来源 · 15 个事件 · 0 条隔离</p>
+  </header>
+
+  <section class="card">
+    <h2>Top 事件</h2>
+    <div class="chart"><svg xmlns="http://www.w3.org/2000/svg" width="960" height="496" viewBox="0 0 960 496" role="img" aria-label="Top event importance">
+<style>
+.title{font:700 24px system-ui,sans-serif;fill:#172033}
+.label{font:14px system-ui,sans-serif;fill:#26324a}
+.value{font:600 14px system-ui,sans-serif;fill:#172033}
+.bar{fill:#5078e8}
+.track{fill:#edf1fb}
+</style>
+<rect width="960" height="496" rx="14" fill="#ffffff"/>
+<text class="title" x="24" y="38">Top event importance</text>
+<text class="label" x="24" y="94">OpenAI expands governed Daybreak cyber …</text>
+<rect class="track" x="330" y="78" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="78" width="435.2" height="20" rx="5"/>
+<text class="value" x="882" y="94">4.03 / 5</text>
+<text class="label" x="24" y="132">MAI-Code-1.1-Flash available in GitHub …</text>
+<rect class="track" x="330" y="116" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="116" width="427.7" height="20" rx="5"/>
+<text class="value" x="882" y="132">3.96 / 5</text>
+<text class="label" x="24" y="170">OpenAI slows Astra release work over cr…</text>
+<rect class="track" x="330" y="154" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="154" width="410.4" height="20" rx="5"/>
+<text class="value" x="882" y="170">3.8 / 5</text>
+<text class="label" x="24" y="208">Gemini Robotics 2 brings whole-body int…</text>
+<rect class="track" x="330" y="192" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="192" width="403.9" height="20" rx="5"/>
+<text class="value" x="882" y="208">3.74 / 5</text>
+<text class="label" x="24" y="246">OpenAI explains the full-duplex archite…</text>
+<rect class="track" x="330" y="230" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="230" width="398.5" height="20" rx="5"/>
+<text class="value" x="882" y="246">3.69 / 5</text>
+<text class="label" x="24" y="284">GitHub adds per-model token breakdowns …</text>
+<rect class="track" x="330" y="268" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="268" width="395.3" height="20" rx="5"/>
+<text class="value" x="882" y="284">3.66 / 5</text>
+<text class="label" x="24" y="322">Google introduces Gemini 3.5 Flash Cyber</text>
+<rect class="track" x="330" y="306" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="306" width="394.2" height="20" rx="5"/>
+<text class="value" x="882" y="322">3.65 / 5</text>
+<text class="label" x="24" y="360">甘肃电投发布紫金驭能电力大模型</text>
+<rect class="track" x="330" y="344" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="344" width="388.8" height="20" rx="5"/>
+<text class="value" x="882" y="360">3.6 / 5</text>
+<text class="label" x="24" y="398">Anthropic introduces Claude for Teachers</text>
+<rect class="track" x="330" y="382" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="382" width="388.8" height="20" rx="5"/>
+<text class="value" x="882" y="398">3.6 / 5</text>
+<text class="label" x="24" y="436">GitHub Copilot weekly update adds paral…</text>
+<rect class="track" x="330" y="420" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="420" width="385.6" height="20" rx="5"/>
+<text class="value" x="882" y="436">3.57 / 5</text>
+</svg>
+</div>
+    <article>
+      <h3>1. OpenAI expands governed Daybreak cyber access</h3>
+      <p>背景：OpenAI正在扩大其Daybreak网络安全项目的受控访问范围，新增Blue与Red两个访问层级，并在治理框架下引入受信任的合作伙伴集成，这些集成配有范围限定的使用边界、日志记录、监控与人工监督。同时，OpenAI推出了面向受信任防御性研究人员的GPT-5.6-Cyber模型。内部高级网络安全评估显示，GPT-5.6-Cyber完成了95.0%的请求，而GPT-5.6 Sol仅完成1.5%、Daybreak Blue访问层级仅完成2.0%，表明该模型在网络攻防任务上的能力显著领先于同系基线模型，凸显其强大的潜在攻防用途。 影响判断：Daybreak扩展与GPT-5.6-Cyber的推出，叠加其95.0%请求完成率与通用模型1.5%的悬殊对比，使OpenAI同时面临机遇与治理压力。一方面，向防御性研究人员开放受控访问有助于加速网络漏洞发现与防护研究，符合其facts中体现的防御导向；另一方面，如此显著的攻防能力差距也抬高了滥用风险，这正是OpenAI将访问限定于受信任研究人员并配备日志、监控与人工监督的原因。从影响评分看，该事件在技术、应用与政策三个维度均为3.5、资本为2.0，说明其影响集中在能力展示与治理实践层面，而非直接的商业或资本信号。</p>
+        <p class="evidence-overview">来源：OpenAI（2 篇） · 事实支持：5 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（2 篇来源，5 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">OpenAI — OpenAI expands Daybreak and introduces GPT-5.6-Cyber</a><code class="audit-id">news_006</code></li>
+        <li><a href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">OpenAI — OpenAI expands the Daybreak Cyber Partner Program</a><code class="audit-id">news_007</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_006.fact_01</code><span class="fact-claim">OpenAI扩展了Daybreak项目，新增Blue和Red访问层级</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_02</code><span class="fact-claim">OpenAI向受信任的防御性研究人员推出了GPT-5.6-Cyber</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_03</code><span class="fact-claim">GPT-5.6-Cyber在内部高级网络安全评估中完成了95.0%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_04</code><span class="fact-claim">GPT-5.6 Sol在相同评估中仅完成1.5%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_05</code><span class="fact-claim">Daybreak Blue访问层级在该评估中完成2.0%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details>
+    </article>
+    <article>
+      <h3>2. MAI-Code-1.1-Flash available in GitHub Copilot</h3>
+      <p>背景：GitHub宣布Microsoft的MAI-Code-1.1-Flash正在GitHub Copilot中推出。这是一款小型编程模型，新增了原生视觉支持，并改善了编码质量、指令遵循、工具使用及性能。由于模型本身与服务器推理效率的提升，该模型的标价较上一代MAI-Code-1-Flash大幅降低了73%。这一底座模型能力的升级与降本，构成了本次产品发布的技术与商业背景。 影响判断：MAI-Code-1.1-Flash以降价73%的姿态进入GitHub Copilot，直接降低了企业级编程助手的模型调用成本，缩小了前沿大模型与低成本小模型之间的价格差，对开发者工具市场的竞争格局具有实际影响。其新增的原生视觉支持意味着Copilot可以更好地处理截图、界面元素等视觉输入，扩展了编码助手的应用边界。影响评分显示应用维度最高（4.0），技术维度为3.0，政策与资本维度仅为1.0和2.0，说明这是一项以产品化落地与普及为主、不涉安全治理的成熟应用型更新。</p>
+        <p class="evidence-overview">来源：GitHub Changelog（1 篇） · 事实支持：5 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，5 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">GitHub Changelog — MAI-Code-1.1-Flash available in GitHub Copilot</a><code class="audit-id">news_001</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_001.fact_02</code><span class="fact-claim">MAI-Code-1.1-Flash 是小型(tier)编程模型</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_001.fact_03</code><span class="fact-claim">该模型新增原生视觉支持(native vision support)</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_001.fact_04</code><span class="fact-claim">该模型改进了编码质量、指令遵循、工具使用和性能</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_001.fact_05</code><span class="fact-claim">模型与服务器效率使标价较 MAI-Code-1-Flash 降低 73%</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_001.fact_01</code><span class="fact-claim">GitHub 宣布 Microsoft 的 MAI-Code-1.1-Flash 正在 GitHub Copilot 中推出</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details>
+    </article>
+    <article>
+      <h3>3. OpenAI slows Astra release work over critical cyber-capability concerns</h3>
+      <p>背景：据Axios报道，OpenAI表示其内部评估无法排除即将推出的Astra模型存在关键网络安全能力，即模型可能具备较强的攻防代码应用潜力。为应对这一风险，OpenAI扩大了安全测试范围，并暂停了未达到更严格安全要求的内置活动。OpenAI技术团队成员也表示，在公司升级安全实践期间，测试进度有所放缓。这一系列的评估、扩测与暂停举措共同构成了Astra发布推迟的安全背景。 影响判断：OpenAI因无法排除Astra模型的关键网络安全能力而主动扩大安全测试、暂停不达标活动，意味着前沿模型的安全放行标准正在显著收紧，安全测试范围与严格程度已成为决定发布节奏的前置条件。这一事件本身也是AI安全治理的重要信号：模型能力评估不再是事后补充，而是直接制约产品上市的时间轴。影响评分中技术维度最高（4.0），应用与政策维度均为3.0，表明影响集中于模型评估方法论与安全治理实践层面。结合同期OpenAI在Daybreak与网络安全模型上的受控发布动作，可印证治理思维正深度嵌入前沿模型生命周期。</p>
+        <p class="evidence-overview">来源：Axios（1 篇） · 事实支持：4 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，4 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">Axios — OpenAI slows Astra release work over critical cyber-capability concerns</a><code class="audit-id">news_003</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_003.fact_01</code><span class="fact-claim">Axios报道称OpenAI表示其内部评估无法排除即将推出的Astra模型存在关键网络安全能力</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_02</code><span class="fact-claim">OpenAI扩大了安全测试范围</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_03</code><span class="fact-claim">OpenAI暂停了未达到更严格安全要求的内置活动</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_04</code><span class="fact-claim">OpenAI技术人员的说法显示测试正在放缓，同时公司升级其安全实践</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details>
+    </article>
+    <article>
+      <h3>4. Gemini Robotics 2 brings whole-body intelligence to robots</h3>
+      <p>背景：Google DeepMind发布了Gemini Robotics 2、Gemini Robotics ER 2与Gemini Robotics On-Device 2三个模型，覆盖全身视觉-语言-动作控制、多步骤任务的具身推理以及高效的本地执行能力。DeepMind表示该系统可以协调多个机器人，并能够在数小时的训练数据下将端侧模型适配到新的机器人本体。这一多模型矩阵与快速适配能力构成了本次机器人AI发布的背景。 影响判断：Gemini Robotics 2系列将视觉-语言-动作能力扩展到全身控制与多机器人协调，并将具备高效本地执行的端侧模型纳入体系，意味着机器人AI正从单一任务走向全身协调与群体协作，同时通过数小时数据即可适配新本体大幅降低部署门槛。影响评分在技术与应用维度均为4.0，反映出对具身智能技术栈和应用落地的双重推动，而政策维度仅1.0、资本维度2.0，说明当前信号主要停留在技术能力与产品形态层面，尚未形成明确的监管或资本影响。</p>
+        <p class="evidence-overview">来源：Google DeepMind（1 篇） · 事实支持：4 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，4 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Google DeepMind — Gemini Robotics 2 brings whole-body intelligence to robots</a><code class="audit-id">news_005</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_005.fact_01</code><span class="fact-claim">Google DeepMind 发布了 Gemini Robotics 2、Gemini Robotics ER 2 和 Gemini Robotics On-Device 2 三个模型。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+        <li><code>news_005.fact_02</code><span class="fact-claim">这些模型覆盖全身视觉-语言-动作控制、多步骤任务的具身推理以及高效的本地执行。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+        <li><code>news_005.fact_03</code><span class="fact-claim">DeepMind 表示该系统可以协调多个机器人。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+        <li><code>news_005.fact_04</code><span class="fact-claim">该系统可以在数小时的训练数据下将端侧模型适配到新的机器人本体。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details>
+    </article>
+    <article>
+      <h3>5. OpenAI explains the full-duplex architecture behind GPT-Live</h3>
+      <p>背景：OpenAI在官方说明中描述了GPT-Live的全双工对话语音架构。GPT-Live被定位为全双工语音模型，能够同时聆听与说话，且其音频路径中无需独立的turn detector。系统的设计将更深的推理或工具使用异步委托给前沿模型，而不会打断正在进行的对话，其生产架构由流式推理、专用媒体路径、异步委托与优化传输共同构成。这些架构细节构成了本次技术说明的背景。 影响判断：OpenAI公开GPT-Live全双工架构，关键创新在于无需turn detector即可实现同时听说的自然对话，并将深层推理与工具使用异步委托给前沿模型而不中断对话。这一架构若推广，将重塑语音AI的产品体验，让语音交互更接近人类对话，同时通过异步委托在不牺牲体验的前提下接入更强的模型能力。影响评分中技术与应用均为4.0，说明该架构对语音交互产品和推理协作架构都有实质推动，而政策与资本维度仅1.0和2.0，表明目前影响集中在技术与产品层面。</p>
+        <p class="evidence-overview">来源：OpenAI（1 篇） · 事实支持：4 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，4 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">OpenAI — OpenAI explains the full-duplex architecture behind GPT-Live</a><code class="audit-id">news_008</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_008.fact_01</code><span class="fact-claim">OpenAI将GPT-Live描述为全双工语音模型，可在同一时间进行聆听和说话。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+        <li><code>news_008.fact_02</code><span class="fact-claim">GPT-Live的音频路径中不需要单独的turn detector。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+        <li><code>news_008.fact_03</code><span class="fact-claim">该系统可将深层推理或工具使用异步委托给前沿模型，且不打断对话。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+        <li><code>news_008.fact_04</code><span class="fact-claim">它的生产架构结合了流式推理、专用媒体路径、异步委托和优化的传输。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2>技术、应用、政策、资本趋势</h2>
+    <p class="note">以下判断来自通过质量门的结构化影响评分，不外推为全市场统计。</p>
+    <div class="chart"><svg xmlns="http://www.w3.org/2000/svg" width="960" height="496" viewBox="0 0 960 496" role="img" aria-label="Topic distribution">
+<style>
+.title{font:700 24px system-ui,sans-serif;fill:#172033}
+.label{font:14px system-ui,sans-serif;fill:#26324a}
+.value{font:600 14px system-ui,sans-serif;fill:#172033}
+.bar{fill:#5078e8}
+.track{fill:#edf1fb}
+</style>
+<rect width="960" height="496" rx="14" fill="#ffffff"/>
+<text class="title" x="24" y="38">Topic distribution</text>
+<text class="label" x="24" y="94">GitHub Copilot</text>
+<rect class="track" x="330" y="78" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="78" width="540.0" height="20" rx="5"/>
+<text class="value" x="882" y="94">3</text>
+<text class="label" x="24" y="132">网络安全</text>
+<rect class="track" x="330" y="116" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="116" width="360.0" height="20" rx="5"/>
+<text class="value" x="882" y="132">2</text>
+<text class="label" x="24" y="170">cybersecurity</text>
+<rect class="track" x="330" y="154" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="154" width="360.0" height="20" rx="5"/>
+<text class="value" x="882" y="170">2</text>
+<text class="label" x="24" y="208">model release</text>
+<rect class="track" x="330" y="192" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="192" width="360.0" height="20" rx="5"/>
+<text class="value" x="882" y="208">2</text>
+<text class="label" x="24" y="246">AI模型发布</text>
+<rect class="track" x="330" y="230" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="230" width="180.0" height="20" rx="5"/>
+<text class="value" x="882" y="246">1</text>
+<text class="label" x="24" y="284">防御性研究</text>
+<rect class="track" x="330" y="268" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="268" width="180.0" height="20" rx="5"/>
+<text class="value" x="882" y="284">1</text>
+<text class="label" x="24" y="322">模型评估</text>
+<rect class="track" x="330" y="306" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="306" width="180.0" height="20" rx="5"/>
+<text class="value" x="882" y="322">1</text>
+<text class="label" x="24" y="360">AI safety</text>
+<rect class="track" x="330" y="344" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="344" width="180.0" height="20" rx="5"/>
+<text class="value" x="882" y="360">1</text>
+<text class="label" x="24" y="398">governance</text>
+<rect class="track" x="330" y="382" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="382" width="180.0" height="20" rx="5"/>
+<text class="value" x="882" y="398">1</text>
+<text class="label" x="24" y="436">partner program</text>
+<rect class="track" x="330" y="420" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="420" width="180.0" height="20" rx="5"/>
+<text class="value" x="882" y="436">1</text>
+</svg>
+</div>
+    <ul><li><strong>技术趋势</strong>：本样本中，前沿模型能力与架构呈现多线突破并伴随治理收紧。网络安全领域，OpenAI的GPT-5.6-Cyber在内部高级评估中完成95.0%请求、远超通用模型1.5%，显示专用网络安全模型能力的代际式跃升；Google DeepMind同步发布经微调用于漏洞发现、验证与修补的Gemini 3.5 Flash Cyber。与此同时，OpenAI因无法排除Astra模型的关键网络安全能力而扩大安全测试、放缓测试进度，说明模型评估已经成为能力释放前的关键门槛。语音与具身方向同样进展显著，GPT-Live以无需turn detector的全双工架构实现异步委托推理，Gemini Robotics 2系列覆盖全身VLA控制与多机器人协调。整体看，技术演进集中于能力跃升与受控释放的二元结构。需注意，本样本仅来自少量权威来源，跨源覆盖度多为1.0，结论宜视为方向性判断。  <p class="evidence-overview">来源：OpenAI、Axios、Google DeepMind（6 篇） · 事实支持：7 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（6 篇来源，7 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">OpenAI — OpenAI expands Daybreak and introduces GPT-5.6-Cyber</a><code class="audit-id">news_006</code></li>
+        <li><a href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">OpenAI — OpenAI expands the Daybreak Cyber Partner Program</a><code class="audit-id">news_007</code></li>
+        <li><a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">Axios — OpenAI slows Astra release work over critical cyber-capability concerns</a><code class="audit-id">news_003</code></li>
+        <li><a href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">Google DeepMind — Google introduces Gemini 3.5 Flash Cyber</a><code class="audit-id">news_010</code></li>
+        <li><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Google DeepMind — Gemini Robotics 2 brings whole-body intelligence to robots</a><code class="audit-id">news_005</code></li>
+        <li><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">OpenAI — OpenAI explains the full-duplex architecture behind GPT-Live</a><code class="audit-id">news_008</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_006.fact_03</code><span class="fact-claim">GPT-5.6-Cyber在内部高级网络安全评估中完成了95.0%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_04</code><span class="fact-claim">GPT-5.6 Sol在相同评估中仅完成1.5%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_003.fact_01</code><span class="fact-claim">Axios报道称OpenAI表示其内部评估无法排除即将推出的Astra模型存在关键网络安全能力</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_02</code><span class="fact-claim">OpenAI扩大了安全测试范围</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_010.fact_02</code><span class="fact-claim">该模型经过微调，用于发现、验证和修补软件漏洞</span><a class="sources" href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">查看原始来源</a></li>
+        <li><code>news_005.fact_02</code><span class="fact-claim">这些模型覆盖全身视觉-语言-动作控制、多步骤任务的具身推理以及高效的本地执行。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+        <li><code>news_008.fact_04</code><span class="fact-claim">它的生产架构结合了流式推理、专用媒体路径、异步委托和优化的传输。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>应用趋势</strong>：应用落地层面，开发者工具、教育与行业场景呈现密集的产品化推进。GitHub Copilot推出降价73%的MAI-Code-1.1-Flash编程模型，并新增按模型划分的token成本明细、并发会话与isolated-worktree实验命令，持续改进开发者工作流与成本透明度；该模型新增的原生视觉支持也扩展了编码助手的输入方式。行业侧，甘肃电投发布紫金驭能电力大模型，应用于光伏巡检、风光功率预测与电力交易辅助决策，AI无人机巡检将全域周期从三个月缩至一周内；Google Gemini Robotics 2强调端侧模型数小时数据即可适配新机器人本体。教育与科研端，Anthropic推出面向美国K-12教师的Claude for Teachers免费访问，OpenAI承诺为约2000名美国国家实验室研究人员提供Codex访问。综合看，样本中的应用信号集中于开发者工具、具身机器人和垂直行业，商业化与普惠路径并存，但各来源独立、跨源覆盖有限，趋势强度应审慎评估。  <p class="evidence-overview">来源：GitHub Changelog、中新网甘肃、Google DeepMind、Anthropic（5 篇） · 事实支持：7 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（5 篇来源，7 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">GitHub Changelog — MAI-Code-1.1-Flash available in GitHub Copilot</a><code class="audit-id">news_001</code></li>
+        <li><a href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">GitHub Changelog — GitHub adds per-model token breakdowns to Copilot usage reports</a><code class="audit-id">news_002</code></li>
+        <li><a href="https://www.gs.chinanews.com.cn/news/2026/07-29/394937.shtml">中新网甘肃 — 甘肃电投发布紫金驭能电力大模型</a><code class="audit-id">news_014</code></li>
+        <li><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Google DeepMind — Gemini Robotics 2 brings whole-body intelligence to robots</a><code class="audit-id">news_005</code></li>
+        <li><a href="https://www.anthropic.com/news/claude-for-teachers">Anthropic — Anthropic introduces Claude for Teachers</a><code class="audit-id">news_015</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_001.fact_03</code><span class="fact-claim">该模型新增原生视觉支持(native vision support)</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_001.fact_05</code><span class="fact-claim">模型与服务器效率使标价较 MAI-Code-1-Flash 降低 73%</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_002.fact_02</code><span class="fact-claim">报告现在展示输入、输出、缓存读取和缓存写入 token，以及每个模型消耗的 AI 积分。</span><a class="sources" href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">查看原始来源</a></li>
+        <li><code>news_014.fact_03</code><span class="fact-claim">模型已应用于光伏巡检、风光功率预测、负荷与电价预测、电力交易辅助决策和AI办公</span><a class="sources" href="https://www.gs.chinanews.com.cn/news/2026/07-29/394937.shtml">查看原始来源</a></li>
+        <li><code>news_014.fact_04</code><span class="fact-claim">AI无人机巡检将全域巡检周期从三个月缩短至一周以内</span><a class="sources" href="https://www.gs.chinanews.com.cn/news/2026/07-29/394937.shtml">查看原始来源</a></li>
+        <li><code>news_005.fact_04</code><span class="fact-claim">该系统可以在数小时的训练数据下将端侧模型适配到新的机器人本体。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+        <li><code>news_015.fact_02</code><span class="fact-claim">The product gives verified US K-12 educators free access to premium Claude capabilities.</span><a class="sources" href="https://www.anthropic.com/news/claude-for-teachers">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>政策趋势</strong>：政策与治理维度的核心信号是受控访问正成为网络安全类模型的通行策略，而安全评估日益前置于模型发布流程。OpenAI扩展Daybreak项目的受控访问并为防御性研究人员提供GPT-5.6-Cyber，配置范围限定、日志、监控与人工监督；Google DeepMind因双用途性质将Gemini 3.5 Flash Cyber通过CodeMender平台以有限试点形式提供给政府和可信伙伴，明确旨在给防御者更早访问并降低滥用。OpenAI同时因无法排除Astra的关键网络安全能力而扩大测试、暂停未达标活动，显示监管内嵌于模型生命周期。政府与企业的合作亦在深化，OpenAI承诺支持美国能源部Genesis Mission，为约2000名研究人员提供Codex、API与GPT-Rosalind定向访问。需注意，本样本中政策类证据多源自厂商自述或单一权威媒体，跨源验证不足，政策趋势判断宜保持审慎样本边界。  <p class="evidence-overview">来源：OpenAI、Google DeepMind、Axios（5 篇） · 事实支持：8 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（5 篇来源，8 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">OpenAI — OpenAI expands Daybreak and introduces GPT-5.6-Cyber</a><code class="audit-id">news_006</code></li>
+        <li><a href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">OpenAI — OpenAI expands the Daybreak Cyber Partner Program</a><code class="audit-id">news_007</code></li>
+        <li><a href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">Google DeepMind — Google introduces Gemini 3.5 Flash Cyber</a><code class="audit-id">news_010</code></li>
+        <li><a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">Axios — OpenAI slows Astra release work over critical cyber-capability concerns</a><code class="audit-id">news_003</code></li>
+        <li><a href="https://openai.com/index/advancing-the-next-era-of-national-science/">OpenAI — OpenAI commits AI access and funding to the US Genesis Mission</a><code class="audit-id">news_009</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_006.fact_01</code><span class="fact-claim">OpenAI扩展了Daybreak项目，新增Blue和Red访问层级</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_02</code><span class="fact-claim">OpenAI向受信任的防御性研究人员推出了GPT-5.6-Cyber</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_010.fact_03</code><span class="fact-claim">由于该技术的双重用途性质，DeepMind 最初将通过有限访问试点提供该模型</span><a class="sources" href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">查看原始来源</a></li>
+        <li><code>news_010.fact_04</code><span class="fact-claim">该受控发布旨在让防御者更早获得访问，同时降低更广泛的滥用风险</span><a class="sources" href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">查看原始来源</a></li>
+        <li><code>news_003.fact_03</code><span class="fact-claim">OpenAI暂停了未达到更严格安全要求的内置活动</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_04</code><span class="fact-claim">OpenAI技术人员的说法显示测试正在放缓，同时公司升级其安全实践</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_009.fact_02</code><span class="fact-claim">OpenAI committed 4 million dollars in Codex access for about 2,000 researchers</span><a class="sources" href="https://openai.com/index/advancing-the-next-era-of-national-science/">查看原始来源</a></li>
+        <li><code>news_009.fact_05</code><span class="fact-claim">OpenAI plans selected access to GPT-Rosalind for eligible national-laboratory researchers</span><a class="sources" href="https://openai.com/index/advancing-the-next-era-of-national-science/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>资本趋势</strong>：资本维度在本样本中的直接信号相对有限且分散。OpenAI承诺支持美国能源部Genesis Mission，投入400万美元Codex访问额度、300万美元API支持，并对250万美元支出提供最高1000万美元的API使用额度，体现对其科研生态的间接资源投放；Anthropic承诺向加拿大科研机构投入1000万加元用于有益且负责的AI应用，并宣布与Amii、Mila和Vector Institute等机构合作，属面向研究与生态的定向投入。腾讯云披露混元Hy3一周调用量增长68倍，指向模型使用热度而非直接融资。整体来看，本样本中的资本信号多以科研资助、API额度或生态投入形式出现，而非股权融资或商业化交易，且多由厂商自述，资金来源与用途细节有限。因此，资本维度的趋势仅为较弱的观察信号，尚不足以支撑明确的资本流向判断。  <p class="evidence-overview">来源：OpenAI、Anthropic、腾讯云开发者社区（3 篇） · 事实支持：6 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（3 篇来源，6 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/advancing-the-next-era-of-national-science/">OpenAI — OpenAI commits AI access and funding to the US Genesis Mission</a><code class="audit-id">news_009</code></li>
+        <li><a href="https://www.anthropic.com/news/canadian-ai-research">Anthropic — Anthropic commits 10 million Canadian dollars to AI research</a><code class="audit-id">news_016</code></li>
+        <li><a href="https://developer.cloud.tencent.com/article/2710977">腾讯云开发者社区 — 腾讯云7月集中升级AI存储、Agent Runtime与开发者工具</a><code class="audit-id">news_012</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_009.fact_02</code><span class="fact-claim">OpenAI committed 4 million dollars in Codex access for about 2,000 researchers</span><a class="sources" href="https://openai.com/index/advancing-the-next-era-of-national-science/">查看原始来源</a></li>
+        <li><code>news_009.fact_03</code><span class="fact-claim">OpenAI committed 3 million dollars in API support for two scientific campaigns</span><a class="sources" href="https://openai.com/index/advancing-the-next-era-of-national-science/">查看原始来源</a></li>
+        <li><code>news_009.fact_04</code><span class="fact-claim">OpenAI committed up to 10 million dollars in API usage for 2.5 million dollars spent</span><a class="sources" href="https://openai.com/index/advancing-the-next-era-of-national-science/">查看原始来源</a></li>
+        <li><code>news_016.fact_01</code><span class="fact-claim">Anthropic承诺向加拿大科研机构投入1000万加元</span><a class="sources" href="https://www.anthropic.com/news/canadian-ai-research">查看原始来源</a></li>
+        <li><code>news_016.fact_02</code><span class="fact-claim">资金用于有益且负责任的AI应用</span><a class="sources" href="https://www.anthropic.com/news/canadian-ai-research">查看原始来源</a></li>
+        <li><code>news_012.fact_05</code><span class="fact-claim">文章披露混元Hy3一周调用量增长68倍</span><a class="sources" href="https://developer.cloud.tencent.com/article/2710977">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li></ul>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>风险信号</h2>
+      <ul><li><strong>OpenAI expands governed Daybreak cyber access</strong>：GPT-5.6-Cyber虽被评估为低于Critical阈值，但达到High网络安全能力阈值，具备较高网络能力，需关注其被滥用于攻击性用途的双用途风险及对应治理措施。；合作伙伴必须对模型结果进行人工审查后方可行动，且需满足身份验证、日志与监控等保障要求，这为伙伴引入额外的合规与运营成本，可能影响部署速度与ROI。  <p class="evidence-overview">来源：OpenAI（2 篇） · 事实支持：4 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（2 篇来源，4 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">OpenAI — OpenAI expands Daybreak and introduces GPT-5.6-Cyber</a><code class="audit-id">news_006</code></li>
+        <li><a href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">OpenAI — OpenAI expands the Daybreak Cyber Partner Program</a><code class="audit-id">news_007</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_006.fact_06</code><span class="fact-claim">OpenAI将GPT-5.6-Cyber评估为高网络安全能力阈值</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_07</code><span class="fact-claim">GPT-5.6-Cyber的网络安全能力低于临界阈值</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_007.fact_02</code><span class="fact-claim">Depending on the engagement, safeguards can include identity verification, defined testing scopes, logging, monitoring and human oversight.</span><a class="sources" href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">查看原始来源</a></li>
+        <li><code>news_007.fact_03</code><span class="fact-claim">Partners are expected to review model findings before acting on them, keeping deployment within controlled defensive workflows.</span><a class="sources" href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>OpenAI slows Astra release work over critical cyber-capability concerns</strong>：Astra模型因内部评估无法排除关键网络安全能力而暂停部分活动并扩大测试，可能导致产品发布进一步延迟（事实基于fact_01、fact_02）。；模型具备关键网络安全能力可能引发监管关注与合规审查，增加发布前的政策不确定性（事实基于fact_01）。  <p class="evidence-overview">来源：Axios（1 篇） · 事实支持：2 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，2 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">Axios — OpenAI slows Astra release work over critical cyber-capability concerns</a><code class="audit-id">news_003</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_003.fact_01</code><span class="fact-claim">Axios报道称OpenAI表示其内部评估无法排除即将推出的Astra模型存在关键网络安全能力</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_02</code><span class="fact-claim">OpenAI扩大了安全测试范围</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>Google introduces Gemini 3.5 Flash Cyber</strong>：该技术的双重用途性质意味着相关能力在更广泛发布后可能带来滥用风险，因此需持续关注其受控试点之外的扩散路径。  <p class="evidence-overview">来源：Google DeepMind（1 篇） · 事实支持：2 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，2 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">Google DeepMind — Google introduces Gemini 3.5 Flash Cyber</a><code class="audit-id">news_010</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_010.fact_04</code><span class="fact-claim">该受控发布旨在让防御者更早获得访问，同时降低更广泛的滥用风险</span><a class="sources" href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">查看原始来源</a></li>
+        <li><code>news_010.fact_02</code><span class="fact-claim">该模型经过微调，用于发现、验证和修补软件漏洞</span><a class="sources" href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li></ul>
+    </section>
+    <section class="card">
+      <h2>机会信号</h2>
+      <ul><li><strong>OpenAI expands governed Daybreak cyber access</strong>：GPT-5.6-Cyber在高级网络安全评估中完成率95.0%，远超GPT-5.6 Sol（1.5%）和Daybreak Blue（2.0%），表明面向防御性研究人员存在显著的技术能力机会，可用于网络安全防御研究场景。；Daybreak Cyber Partner Program 的扩大为网络安全企业提供了将前沿网络模型集成进受治理产品的合作机会，相关伙伴可通过身份验证、日志监控与人工监督等机制在受控防御工作流中部署模型。  <p class="evidence-overview">来源：OpenAI（2 篇） · 事实支持：6 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（2 篇来源，6 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">OpenAI — OpenAI expands Daybreak and introduces GPT-5.6-Cyber</a><code class="audit-id">news_006</code></li>
+        <li><a href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">OpenAI — OpenAI expands the Daybreak Cyber Partner Program</a><code class="audit-id">news_007</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_006.fact_03</code><span class="fact-claim">GPT-5.6-Cyber在内部高级网络安全评估中完成了95.0%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_04</code><span class="fact-claim">GPT-5.6 Sol在相同评估中仅完成1.5%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_006.fact_05</code><span class="fact-claim">Daybreak Blue访问层级在该评估中完成2.0%的请求</span><a class="sources" href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">查看原始来源</a></li>
+        <li><code>news_007.fact_01</code><span class="fact-claim">OpenAI announced that approved Daybreak Cyber Partners will integrate frontier cyber models into governed security products and services.</span><a class="sources" href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">查看原始来源</a></li>
+        <li><code>news_007.fact_02</code><span class="fact-claim">Depending on the engagement, safeguards can include identity verification, defined testing scopes, logging, monitoring and human oversight.</span><a class="sources" href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">查看原始来源</a></li>
+        <li><code>news_007.fact_03</code><span class="fact-claim">Partners are expected to review model findings before acting on them, keeping deployment within controlled defensive workflows.</span><a class="sources" href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>MAI-Code-1.1-Flash available in GitHub Copilot</strong>：MAI-Code-1.1-Flash 通过效率提升大幅降价 73%，并新增原生视觉支持，可能吸引更多开发者在 GitHub Copilot 中使用该模型，扩大代码模型采用面。  <p class="evidence-overview">来源：GitHub Changelog（1 篇） · 事实支持：3 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，3 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">GitHub Changelog — MAI-Code-1.1-Flash available in GitHub Copilot</a><code class="audit-id">news_001</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_001.fact_03</code><span class="fact-claim">该模型新增原生视觉支持(native vision support)</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_001.fact_05</code><span class="fact-claim">模型与服务器效率使标价较 MAI-Code-1-Flash 降低 73%</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+        <li><code>news_001.fact_01</code><span class="fact-claim">GitHub 宣布 Microsoft 的 MAI-Code-1.1-Flash 正在 GitHub Copilot 中推出</span><a class="sources" href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>OpenAI slows Astra release work over critical cyber-capability concerns</strong>：OpenAI升级安全实践并扩大测试，可能建立更稳健的安全评估基准，为AI安全生态提供参考（事实基于fact_02、fact_03、fact_04）。  <p class="evidence-overview">来源：Axios（1 篇） · 事实支持：3 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，3 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">Axios — OpenAI slows Astra release work over critical cyber-capability concerns</a><code class="audit-id">news_003</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_003.fact_02</code><span class="fact-claim">OpenAI扩大了安全测试范围</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_03</code><span class="fact-claim">OpenAI暂停了未达到更严格安全要求的内置活动</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+        <li><code>news_003.fact_04</code><span class="fact-claim">OpenAI技术人员的说法显示测试正在放缓，同时公司升级其安全实践</span><a class="sources" href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>Gemini Robotics 2 brings whole-body intelligence to robots</strong>：Gemini Robotics 2 提供数小时数据即可适配新机器人本体的能力（fact_04），以及多机器人协调能力（fact_03），对机器人厂商与具身智能应用开发者构成显著的低摩擦部署机会。  <p class="evidence-overview">来源：Google DeepMind（1 篇） · 事实支持：2 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，2 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Google DeepMind — Gemini Robotics 2 brings whole-body intelligence to robots</a><code class="audit-id">news_005</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_005.fact_03</code><span class="fact-claim">DeepMind 表示该系统可以协调多个机器人。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+        <li><code>news_005.fact_04</code><span class="fact-claim">该系统可以在数小时的训练数据下将端侧模型适配到新的机器人本体。</span><a class="sources" href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>OpenAI explains the full-duplex architecture behind GPT-Live</strong>：GPT-Live通过去除独立turn detector并采用异步委托前沿模型的设计，可能显著降低实时语音交互延迟，为语音助手、客服及实时翻译等应用带来新的产品机会。  <p class="evidence-overview">来源：OpenAI（1 篇） · 事实支持：3 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，3 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">OpenAI — OpenAI explains the full-duplex architecture behind GPT-Live</a><code class="audit-id">news_008</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_008.fact_01</code><span class="fact-claim">OpenAI将GPT-Live描述为全双工语音模型，可在同一时间进行聆听和说话。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+        <li><code>news_008.fact_02</code><span class="fact-claim">GPT-Live的音频路径中不需要单独的turn detector。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+        <li><code>news_008.fact_03</code><span class="fact-claim">该系统可将深层推理或工具使用异步委托给前沿模型，且不打断对话。</span><a class="sources" href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li><li><strong>GitHub adds per-model token breakdowns to Copilot usage reports</strong>：基于增加缓存读取/写入 token 与 AI 积分明细的能力，企业管理员可更精细地核算各模型的使用成本，为优化模型调用策略和预算分配提供依据。  <p class="evidence-overview">来源：GitHub Changelog（1 篇） · 事实支持：2 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（1 篇来源，2 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        <li><a href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">GitHub Changelog — GitHub adds per-model token breakdowns to Copilot usage reports</a><code class="audit-id">news_002</code></li>
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        <li><code>news_002.fact_02</code><span class="fact-claim">报告现在展示输入、输出、缓存读取和缓存写入 token，以及每个模型消耗的 AI 积分。</span><a class="sources" href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">查看原始来源</a></li>
+        <li><code>news_002.fact_03</code><span class="fact-claim">该功能可供 Copilot Business 和 Enterprise 管理员及 Copilot 个人用户使用。</span><a class="sources" href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">查看原始来源</a></li>
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details></li></ul>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>来源覆盖</h2>
+    <div class="chart"><svg xmlns="http://www.w3.org/2000/svg" width="960" height="268" viewBox="0 0 960 268" role="img" aria-label="Source type coverage">
+<style>
+.title{font:700 24px system-ui,sans-serif;fill:#172033}
+.label{font:14px system-ui,sans-serif;fill:#26324a}
+.value{font:600 14px system-ui,sans-serif;fill:#172033}
+.bar{fill:#5078e8}
+.track{fill:#edf1fb}
+</style>
+<rect width="960" height="268" rx="14" fill="#ffffff"/>
+<text class="title" x="24" y="38">Source type coverage</text>
+<text class="label" x="24" y="94">official</text>
+<rect class="track" x="330" y="78" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="78" width="540.0" height="20" rx="5"/>
+<text class="value" x="882" y="94">8</text>
+<text class="label" x="24" y="132">technology_media</text>
+<rect class="track" x="330" y="116" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="116" width="270.0" height="20" rx="5"/>
+<text class="value" x="882" y="132">4</text>
+<text class="label" x="24" y="170">code_release</text>
+<rect class="track" x="330" y="154" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="154" width="202.5" height="20" rx="5"/>
+<text class="value" x="882" y="170">3</text>
+<text class="label" x="24" y="208">community</text>
+<rect class="track" x="330" y="192" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="192" width="67.5" height="20" rx="5"/>
+<text class="value" x="882" y="208">1</text>
+</svg>
+</div>
+    <ol><li><a href="https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/">MAI-Code-1.1-Flash available in GitHub Copilot</a> <span class="meta">news_001 · GitHub Changelog</span></li><li><a href="https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report/">GitHub adds per-model token breakdowns to Copilot usage reports</a> <span class="meta">news_002 · GitHub Changelog</span></li><li><a href="https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks">OpenAI slows Astra release work over critical cyber-capability concerns</a> <span class="meta">news_003 · Axios</span></li><li><a href="https://apnews.com/article/df8a4e7d7825470d09e8090367457c2c">Meta releases Muse Glimmer and outlines a broader open-model strategy</a> <span class="meta">news_004 · Associated Press</span></li><li><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/">Gemini Robotics 2 brings whole-body intelligence to robots</a> <span class="meta">news_005 · Google DeepMind</span></li><li><a href="https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/">OpenAI expands Daybreak and introduces GPT-5.6-Cyber</a> <span class="meta">news_006 · OpenAI</span></li><li><a href="https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/">OpenAI expands the Daybreak Cyber Partner Program</a> <span class="meta">news_007 · OpenAI</span></li><li><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">OpenAI explains the full-duplex architecture behind GPT-Live</a> <span class="meta">news_008 · OpenAI</span></li><li><a href="https://openai.com/index/advancing-the-next-era-of-national-science/">OpenAI commits AI access and funding to the US Genesis Mission</a> <span class="meta">news_009 · OpenAI</span></li><li><a href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/">Google introduces Gemini 3.5 Flash Cyber</a> <span class="meta">news_010 · Google DeepMind</span></li><li><a href="https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3/">GitHub Copilot weekly update adds parallel sessions and isolated worktrees</a> <span class="meta">news_011 · GitHub Changelog</span></li><li><a href="https://developer.cloud.tencent.com/article/2710977">腾讯云7月集中升级AI存储、Agent Runtime与开发者工具</a> <span class="meta">news_012 · 腾讯云开发者社区</span></li><li><a href="https://www.news.cn/tech/20260729/d3b63475359e442da8c86de658e272be/c.html">2026数博会将聚焦词元并设置人工智能大模型市集</a> <span class="meta">news_013 · 新华网（科技日报）</span></li><li><a href="https://www.gs.chinanews.com.cn/news/2026/07-29/394937.shtml">甘肃电投发布紫金驭能电力大模型</a> <span class="meta">news_014 · 中新网甘肃</span></li><li><a href="https://www.anthropic.com/news/claude-for-teachers">Anthropic introduces Claude for Teachers</a> <span class="meta">news_015 · Anthropic</span></li><li><a href="https://www.anthropic.com/news/canadian-ai-research">Anthropic commits 10 million Canadian dollars to AI research</a> <span class="meta">news_016 · Anthropic</span></li></ol>
+  </section>
+
+  <section class="card">
+    <h2>方法与限制</h2>
+    <ul>
+      <li>抽取阶段采用 batch_size=1，用更多请求换取逐字证据校验、精确重试、单条检查点和失败隔离。</li>
+      <li>聚类后按透明公式排名，避免同一事件重复占榜。</li>
+      <li>图表只读取通过校验的结构化数据。</li>
+      <li>报告分析 Agent 只读取已验证事件摘要和结构化评分，不读取整批原始文章；每个分析段均保留事实 ID。</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

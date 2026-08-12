@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ report.title }}</title>
+  <style>
+    :root { color-scheme: light; --ink:#172033; --muted:#64708a; --line:#e4e8f1; --blue:#5078e8; --paper:#fff; --bg:#f4f6fb; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif; }
+    main { width:min(1040px,calc(100% - 32px)); margin:32px auto; }
+    header,.card { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:28px; margin:18px 0; box-shadow:0 8px 30px rgba(34,48,82,.06); }
+    h1 { margin:.1em 0; font-size:clamp(28px,5vw,48px); line-height:1.15; }
+    h2 { margin-top:0; }
+    h3 { margin-bottom:.35em; }
+    .meta,.sources,.facts,.note { color:var(--muted); font-size:14px; }
+    .score { display:inline-block; background:#eef2ff; color:#3657b5; border-radius:999px; padding:2px 10px; }
+    .chart svg { width:100%; height:auto; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    a { color:#365fd6; }
+    ul { padding-left:1.3em; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+    .grid .card { margin:0; }
+    .evidence-overview { color:var(--muted); font-size:14px; margin:.6em 0 .35em; }
+    .evidence-details { border:1px solid var(--line); border-radius:12px; background:#fafbfe; margin:.35em 0 1.2em; }
+    .evidence-details summary { color:#3657b5; cursor:pointer; font-weight:600; padding:10px 14px; }
+    .evidence-body { border-top:1px solid var(--line); padding:4px 14px 12px; }
+    .evidence-body h4 { margin:.9em 0 .25em; }
+    .audit-list { margin:.25em 0; padding-left:1.3em; }
+    .audit-list li { margin:.45em 0; }
+    .audit-id { color:var(--muted); font-size:12px; margin-left:.4em; }
+    .fact-claim { display:block; margin-top:.15em; }
+  </style>
+</head>
+<body>
+<main>
+  {% macro evidence_details(source_ids, fact_ids) -%}
+  {% set source_names = unique_source_names(source_ids) %}
+  <p class="evidence-overview">来源：{% for name in source_names %}{{ name }}{% if not loop.last %}、{% endif %}{% endfor %}（{{ source_ids | length }} 篇） · 事实支持：{{ fact_ids | length }} 条</p>
+  <details class="evidence-details">
+    <summary>查看来源和事实依据（{{ source_ids | length }} 篇来源，{{ fact_ids | length }} 条事实）</summary>
+    <div class="evidence-body">
+      <h4>来源文章</h4>
+      <ul class="audit-list">
+        {% for item_id in source_ids %}
+        <li><a href="{{ item_by_id[item_id].source_url }}">{{ item_by_id[item_id].source_name }} — {{ item_by_id[item_id].title }}</a><code class="audit-id">{{ item_id }}</code></li>
+        {% endfor %}
+      </ul>
+      <h4>已验证事实</h4>
+      <ul class="audit-list">
+        {% for fact_id in fact_ids %}
+        {% set source_id = fact_source_id_by_id[fact_id] %}
+        <li><code>{{ fact_id }}</code><span class="fact-claim">{{ fact_by_id[fact_id].claim }}</span><a class="sources" href="{{ item_by_id[source_id].source_url }}">查看原始来源</a></li>
+        {% endfor %}
+      </ul>
+      <p class="note">事实 ID 对应的逐字证据保存在结构化事件数据中。</p>
+    </div>
+  </details>
+  {%- endmacro %}
+  <header>
+    <p class="meta">DAILY AI INSIGHT · {{ report.report_date.isoformat() }}</p>
+    <h1>{{ report.title }}</h1>
+    <p>{{ report.executive_summary }}</p>
+    {{ evidence_details(executive_source_item_ids, report.executive_summary_fact_ids) }}
+    <p class="meta">{{ report.coverage.input_count }} 条来源 · {{ report.coverage.event_count }} 个事件 · {{ report.coverage.quarantined_count }} 条隔离</p>
+  </header>
+
+  <section class="card">
+    <h2>Top 事件</h2>
+    <div class="chart">{{ chart_svg.importance | safe }}</div>
+    {% for section in report.top_events %}
+    <article>
+      <h3>{{ loop.index }}. {{ section.title }}</h3>
+      <p>{{ section.analysis }}</p>
+      {{ evidence_details(section.source_item_ids, section.supporting_fact_ids) }}
+    </article>
+    {% endfor %}
+  </section>
+
+  <section class="card">
+    <h2>技术、应用、政策、资本趋势</h2>
+    <p class="note">以下判断来自通过质量门的结构化影响评分，不外推为全市场统计。</p>
+    <div class="chart">{{ chart_svg.topics | safe }}</div>
+    <ul>{% for section in report.trends %}<li><strong>{{ section.title }}</strong>：{{ section.analysis }}{{ evidence_details(section.source_item_ids, section.supporting_fact_ids) }}</li>{% endfor %}</ul>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>风险信号</h2>
+      <ul>{% for section in report.risks %}<li><strong>{{ section.title }}</strong>：{{ section.analysis }}{{ evidence_details(section.source_item_ids, section.supporting_fact_ids) }}</li>{% else %}<li>无达到展示条件的风险信号。</li>{% endfor %}</ul>
+    </section>
+    <section class="card">
+      <h2>机会信号</h2>
+      <ul>{% for section in report.opportunities %}<li><strong>{{ section.title }}</strong>：{{ section.analysis }}{{ evidence_details(section.source_item_ids, section.supporting_fact_ids) }}</li>{% else %}<li>无达到展示条件的机会信号。</li>{% endfor %}</ul>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>来源覆盖</h2>
+    <div class="chart">{{ chart_svg.sources | safe }}</div>
+    <ol>{% for item in items %}<li><a href="{{ item.source_url }}">{{ item.title }}</a> <span class="meta">{{ item.id }} · {{ item.source_name }}</span></li>{% endfor %}</ol>
+  </section>
+
+  <section class="card">
+    <h2>方法与限制</h2>
+    <ul>
+      <li>抽取阶段采用 batch_size=1，用更多请求换取逐字证据校验、精确重试、单条检查点和失败隔离。</li>
+      <li>聚类后按透明公式排名，避免同一事件重复占榜。</li>
+      <li>图表只读取通过校验的结构化数据。</li>
+      <li>报告分析 Agent 只读取已验证事件摘要和结构化评分，不读取整批原始文章；每个分析段均保留事实 ID。</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

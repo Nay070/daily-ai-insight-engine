@@ -1,0 +1,108 @@
+{
+  "artifacts": {
+    "events": "data/processed/2026-08-12/events.jsonl",
+    "insights": "data/processed/2026-08-12/insights.jsonl",
+    "raw": "data/raw/2026-08-12.jsonl",
+    "report_analysis": "data/processed/2026-08-12/report-analysis.json",
+    "report_html": "reports/2026-08-12/report.html",
+    "report_json": "reports/2026-08-12/report.json",
+    "report_markdown": "reports/2026-08-12/report.md"
+  },
+  "completed_at": "2026-08-12T07:13:00.473845+08:00",
+  "counts": {
+    "events": 15,
+    "input": 16,
+    "quarantined": 0,
+    "top_events": 5,
+    "trends": 4,
+    "valid_insights": 16
+  },
+  "extraction_attempts": [
+    {
+      "attempt_index": 1,
+      "attempted_count": 16,
+      "failed_item_ids": [],
+      "manifest_path": "data/runs/2026-08-12/manifests/extract.attempt-001.json",
+      "quarantined_count": 0,
+      "resumed_valid_count": 0,
+      "usage": {
+        "cache_read_tokens": 25984,
+        "cache_write_tokens": 0,
+        "input_tokens": 34522,
+        "output_tokens": 15221,
+        "requests": 17,
+        "tool_calls": 0
+      },
+      "valid_insight_count": 16
+    }
+  ],
+  "failures": [],
+  "harness": {
+    "implementation": "repository-native-pydantic-ai-v2",
+    "pydantic-ai": "2.27.1"
+  },
+  "input_path": "data/input/2026-08-12.json",
+  "input_sha256": "50334d25c6f38847144acd234a5729a85d109e37b85cbf880018fe100e243f3a",
+  "mode": "online_model_only",
+  "model_name": "deepseek:deepseek-chat",
+  "performance": {
+    "duration_seconds": 61.136,
+    "extraction_mode": "reused",
+    "stage_duration_seconds": {
+      "cluster": 0.007,
+      "extract": 0.917,
+      "prepare": 0.0,
+      "render": 0.042,
+      "report_analysis": 60.154,
+      "verify": 0.005
+    }
+  },
+  "prompt_versions": {
+    "extraction": "extract-v2",
+    "report_analysis": "report-v3"
+  },
+  "report_date": "2026-08-12",
+  "resume_validation": {
+    "required_fields": [
+      "input_hash",
+      "model_name",
+      "prompt_version",
+      "schema_version"
+    ],
+    "status": "matched"
+  },
+  "run_id": "2026-08-12",
+  "schema_version": "1.0",
+  "schema_versions": {
+    "report": "1.1",
+    "source_insight_event": "1.0"
+  },
+  "started_at": "2026-08-12T07:11:59.337693+08:00",
+  "usage": {
+    "extraction": {
+      "cache_read_tokens": 25984,
+      "cache_write_tokens": 0,
+      "input_tokens": 34522,
+      "output_tokens": 15221,
+      "requests": 17,
+      "tool_calls": 0
+    },
+    "report_analysis": {
+      "cache_read_tokens": 27520,
+      "cache_write_tokens": 0,
+      "input_tokens": 48281,
+      "output_tokens": 8331,
+      "requests": 3,
+      "tool_calls": 0
+    },
+    "total": {
+      "cache_read_tokens": 53504,
+      "cache_write_tokens": 0,
+      "input_tokens": 82803,
+      "output_tokens": 23552,
+      "requests": 20,
+      "tool_calls": 0
+    }
+  },
+  "verification_passed": true
+}

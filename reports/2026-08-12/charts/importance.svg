@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="496" viewBox="0 0 960 496" role="img" aria-label="Top event importance">
+<style>
+.title{font:700 24px system-ui,sans-serif;fill:#172033}
+.label{font:14px system-ui,sans-serif;fill:#26324a}
+.value{font:600 14px system-ui,sans-serif;fill:#172033}
+.bar{fill:#5078e8}
+.track{fill:#edf1fb}
+</style>
+<rect width="960" height="496" rx="14" fill="#ffffff"/>
+<text class="title" x="24" y="38">Top event importance</text>
+<text class="label" x="24" y="94">OpenAI expands governed Daybreak cyber …</text>
+<rect class="track" x="330" y="78" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="78" width="435.2" height="20" rx="5"/>
+<text class="value" x="882" y="94">4.03 / 5</text>
+<text class="label" x="24" y="132">MAI-Code-1.1-Flash available in GitHub …</text>
+<rect class="track" x="330" y="116" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="116" width="427.7" height="20" rx="5"/>
+<text class="value" x="882" y="132">3.96 / 5</text>
+<text class="label" x="24" y="170">OpenAI slows Astra release work over cr…</text>
+<rect class="track" x="330" y="154" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="154" width="410.4" height="20" rx="5"/>
+<text class="value" x="882" y="170">3.8 / 5</text>
+<text class="label" x="24" y="208">Gemini Robotics 2 brings whole-body int…</text>
+<rect class="track" x="330" y="192" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="192" width="403.9" height="20" rx="5"/>
+<text class="value" x="882" y="208">3.74 / 5</text>
+<text class="label" x="24" y="246">OpenAI explains the full-duplex archite…</text>
+<rect class="track" x="330" y="230" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="230" width="398.5" height="20" rx="5"/>
+<text class="value" x="882" y="246">3.69 / 5</text>
+<text class="label" x="24" y="284">GitHub adds per-model token breakdowns …</text>
+<rect class="track" x="330" y="268" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="268" width="395.3" height="20" rx="5"/>
+<text class="value" x="882" y="284">3.66 / 5</text>
+<text class="label" x="24" y="322">Google introduces Gemini 3.5 Flash Cyber</text>
+<rect class="track" x="330" y="306" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="306" width="394.2" height="20" rx="5"/>
+<text class="value" x="882" y="322">3.65 / 5</text>
+<text class="label" x="24" y="360">甘肃电投发布紫金驭能电力大模型</text>
+<rect class="track" x="330" y="344" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="344" width="388.8" height="20" rx="5"/>
+<text class="value" x="882" y="360">3.6 / 5</text>
+<text class="label" x="24" y="398">Anthropic introduces Claude for Teachers</text>
+<rect class="track" x="330" y="382" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="382" width="388.8" height="20" rx="5"/>
+<text class="value" x="882" y="398">3.6 / 5</text>
+<text class="label" x="24" y="436">GitHub Copilot weekly update adds paral…</text>
+<rect class="track" x="330" y="420" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="420" width="385.6" height="20" rx="5"/>
+<text class="value" x="882" y="436">3.57 / 5</text>
+</svg>

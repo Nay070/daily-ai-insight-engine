@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="268" viewBox="0 0 960 268" role="img" aria-label="Source type coverage">
+<style>
+.title{font:700 24px system-ui,sans-serif;fill:#172033}
+.label{font:14px system-ui,sans-serif;fill:#26324a}
+.value{font:600 14px system-ui,sans-serif;fill:#172033}
+.bar{fill:#5078e8}
+.track{fill:#edf1fb}
+</style>
+<rect width="960" height="268" rx="14" fill="#ffffff"/>
+<text class="title" x="24" y="38">Source type coverage</text>
+<text class="label" x="24" y="94">official</text>
+<rect class="track" x="330" y="78" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="78" width="540.0" height="20" rx="5"/>
+<text class="value" x="882" y="94">8</text>
+<text class="label" x="24" y="132">technology_media</text>
+<rect class="track" x="330" y="116" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="116" width="270.0" height="20" rx="5"/>
+<text class="value" x="882" y="132">4</text>
+<text class="label" x="24" y="170">code_release</text>
+<rect class="track" x="330" y="154" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="154" width="202.5" height="20" rx="5"/>
+<text class="value" x="882" y="170">3</text>
+<text class="label" x="24" y="208">community</text>
+<rect class="track" x="330" y="192" width="540" height="20" rx="5"/>
+<rect class="bar" x="330" y="192" width="67.5" height="20" rx="5"/>
+<text class="value" x="882" y="208">1</text>
+</svg>

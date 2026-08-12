@@ -1,0 +1,37 @@
+{
+  "collected_at": "2026-08-12T05:48:45.115876+08:00",
+  "duplicate_count": 0,
+  "duplicates": [],
+  "event_candidate_count": 1,
+  "event_candidates": [
+    {
+      "left_item_id": "news_006",
+      "right_item_id": "news_007",
+      "shared_tokens": [
+        "cyber",
+        "daybreak",
+        "expands",
+        "openai"
+      ],
+      "title_similarity": 0.5
+    }
+  ],
+  "input_count": 16,
+  "input_path": "data/input/2026-08-12.json",
+  "input_sha256": "50334d25c6f38847144acd234a5729a85d109e37b85cbf880018fe100e243f3a",
+  "languages": [
+    "en",
+    "zh"
+  ],
+  "output_count": 16,
+  "output_path": "data/raw/2026-08-12.jsonl",
+  "report_date": "2026-08-12",
+  "schema_version": "1.0",
+  "source_types": [
+    "code_release",
+    "community",
+    "official",
+    "technology_media"
+  ],
+  "stage": "prepare"
+}

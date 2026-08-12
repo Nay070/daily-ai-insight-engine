@@ -1,0 +1,23 @@
+{
+  "analysis_sha256": "187e205bbaed670ea5761fe225035d29d2b9013d05d87b4684a48473a6b91145",
+  "chart_paths": {
+    "importance": "reports/2026-08-12/charts/importance.svg",
+    "sources": "reports/2026-08-12/charts/sources.svg",
+    "topics": "reports/2026-08-12/charts/topics.svg"
+  },
+  "event_sha256": "9b76b707ea6590ce05b4c3065e70a6d5aaaafb9041f2441dfee41fda5c03e8e2",
+  "generated_at": "2026-08-12T07:13:00.425863+08:00",
+  "insight_sha256": "b4a4643b1a5a164e4d612f228b4ddf7d37807c8f9c5181b11d3682d8d84d0bfb",
+  "opportunity_count": 6,
+  "output_html_path": "reports/2026-08-12/report.html",
+  "output_json_path": "reports/2026-08-12/report.json",
+  "output_markdown_path": "reports/2026-08-12/report.md",
+  "prompt_version": "report-v3",
+  "raw_sha256": "60b73354bc5ad7d2d1238cf336893ab0c7df0c44b44c849ee95a86c607592931",
+  "report_date": "2026-08-12",
+  "risk_count": 3,
+  "schema_version": "1.1",
+  "stage": "report",
+  "top_event_count": 5,
+  "trend_count": 4
+}

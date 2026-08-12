@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract News Insight"
+  short_description: "Extract evidence-grounded news data"
+  default_prompt: "Use $extract-news-insight to extract a validated insight from one news item."

@@ -1,0 +1,21 @@
+{
+  "duration_seconds": 60.154,
+  "event_sha256": "9b76b707ea6590ce05b4c3065e70a6d5aaaafb9041f2441dfee41fda5c03e8e2",
+  "insight_sha256": "b4a4643b1a5a164e4d612f228b4ddf7d37807c8f9c5181b11d3682d8d84d0bfb",
+  "model_name": "deepseek:deepseek-chat",
+  "output_path": "data/processed/2026-08-12/report-analysis.json",
+  "output_sha256": "187e205bbaed670ea5761fe225035d29d2b9013d05d87b4684a48473a6b91145",
+  "prompt_version": "report-v3",
+  "schema_version": "1.1",
+  "stage": "analyze",
+  "top_event_count": 5,
+  "trend_count": 4,
+  "usage": {
+    "cache_read_tokens": 27520,
+    "cache_write_tokens": 0,
+    "input_tokens": 48281,
+    "output_tokens": 8331,
+    "requests": 3,
+    "tool_calls": 0
+  }
+}

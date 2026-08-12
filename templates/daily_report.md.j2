@@ -1,0 +1,68 @@
+# {{ report.title }}
+
+生成时间：{{ report.generated_at.isoformat() }}  
+数据覆盖：{{ report.coverage.input_count }} 条来源、{{ report.coverage.event_count }} 个事件、{{ report.coverage.quarantined_count }} 条隔离
+
+## 执行摘要
+
+{{ report.executive_summary }}
+
+事实依据：{% for fact_id in report.executive_summary_fact_ids %}`{{ fact_id }}`{% if not loop.last %}、{% endif %}{% endfor %}
+
+![事件重要度](charts/{{ chart_paths.importance }})
+
+## Top 事件
+
+{% for section in report.top_events %}
+### {{ loop.index }}. {{ section.title }}
+
+{{ section.analysis }}
+
+来源：{% for item_id in section.source_item_ids %}[{{ item_id }}]({{ item_by_id[item_id].source_url }}){% if not loop.last %}、{% endif %}{% endfor %}
+
+事实依据：{% for fact_id in section.supporting_fact_ids %}`{{ fact_id }}`{% if not loop.last %}、{% endif %}{% endfor %}
+
+{% endfor %}
+## 技术、应用、政策、资本趋势
+
+> 下列判断来自已通过质量门的 {{ report.coverage.valid_insight_count }} 条样本及其四维影响评分，不等同于全市场统计。
+
+{% for section in report.trends %}
+- **{{ section.title }}**：{{ section.analysis }}（来源：{% for item_id in section.source_item_ids %}[{{ item_id }}]({{ item_by_id[item_id].source_url }}){% if not loop.last %}、{% endif %}{% endfor %}；事实：{% for fact_id in section.supporting_fact_ids %}`{{ fact_id }}`{% if not loop.last %}、{% endif %}{% endfor %}）
+{% endfor %}
+
+![主题分布](charts/{{ chart_paths.topics }})
+
+> 上图是辅助性的主题词分布；四方向趋势结论以结构化影响评分和事件证据为准。
+
+## 风险信号
+
+{% for section in report.risks %}
+- **{{ section.title }}**：{{ section.analysis }}（来源：{% for item_id in section.source_item_ids %}[{{ item_id }}]({{ item_by_id[item_id].source_url }}){% if not loop.last %}、{% endif %}{% endfor %}；事实：{% for fact_id in section.supporting_fact_ids %}`{{ fact_id }}`{% if not loop.last %}、{% endif %}{% endfor %}）
+{% else %}
+- 本期结构化数据中没有达到展示条件的风险信号。
+{% endfor %}
+
+## 机会信号
+
+{% for section in report.opportunities %}
+- **{{ section.title }}**：{{ section.analysis }}（来源：{% for item_id in section.source_item_ids %}[{{ item_id }}]({{ item_by_id[item_id].source_url }}){% if not loop.last %}、{% endif %}{% endfor %}；事实：{% for fact_id in section.supporting_fact_ids %}`{{ fact_id }}`{% if not loop.last %}、{% endif %}{% endfor %}）
+{% else %}
+- 本期结构化数据中没有达到展示条件的机会信号。
+{% endfor %}
+
+## 来源覆盖
+
+![来源类型分布](charts/{{ chart_paths.sources }})
+
+{% for item in items %}
+- [{{ item.id }}] [{{ item.title }}]({{ item.source_url }}) — {{ item.source_name }}，{{ item.published_at.isoformat() }}
+{% endfor %}
+
+## 方法与限制
+
+- 抽取阶段采用 `batch_size=1`，用更多请求换取证据逐字校验、精确重试、单条检查点和失败隔离。
+- 证据片段必须逐字存在于规范化来源内容中，否则重试并最终隔离。
+- 对事件聚类后再排名；同一事件的多篇内容不会作为独立 Top 项重复计数。
+- 重要度采用 `importance-v1` 确定性公式；图表只读取校验后的结构化字段。
+- 报告分析 Agent 只读取已验证事件摘要和结构化评分，不读取整批原始文章；每个分析段均保留事实 ID。

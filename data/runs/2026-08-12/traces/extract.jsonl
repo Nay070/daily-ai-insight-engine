@@ -1,0 +1,48 @@
+{"event": "run_started", "item_id": "news_001"}
+{"event": "output_validated", "fact_count": 6, "item_id": "news_001"}
+{"event": "run_completed", "item_id": "news_001"}
+{"event": "run_started", "item_id": "news_002"}
+{"event": "output_validated", "fact_count": 3, "item_id": "news_002"}
+{"event": "run_completed", "item_id": "news_002"}
+{"event": "run_started", "item_id": "news_003"}
+{"event": "output_validated", "fact_count": 4, "item_id": "news_003"}
+{"event": "run_completed", "item_id": "news_003"}
+{"event": "run_started", "item_id": "news_004"}
+{"event": "output_validated", "fact_count": 4, "item_id": "news_004"}
+{"event": "run_completed", "item_id": "news_004"}
+{"event": "run_started", "item_id": "news_005"}
+{"event": "output_validated", "fact_count": 4, "item_id": "news_005"}
+{"event": "run_completed", "item_id": "news_005"}
+{"event": "run_started", "item_id": "news_006"}
+{"event": "output_validated", "fact_count": 7, "item_id": "news_006"}
+{"event": "run_completed", "item_id": "news_006"}
+{"event": "run_started", "item_id": "news_007"}
+{"event": "output_validated", "fact_count": 3, "item_id": "news_007"}
+{"event": "run_completed", "item_id": "news_007"}
+{"event": "run_started", "item_id": "news_008"}
+{"event": "output_validated", "fact_count": 4, "item_id": "news_008"}
+{"event": "run_completed", "item_id": "news_008"}
+{"event": "run_started", "item_id": "news_009"}
+{"event": "output_validated", "fact_count": 5, "item_id": "news_009"}
+{"event": "run_completed", "item_id": "news_009"}
+{"event": "run_started", "item_id": "news_010"}
+{"event": "output_validated", "fact_count": 4, "item_id": "news_010"}
+{"event": "run_completed", "item_id": "news_010"}
+{"event": "run_started", "item_id": "news_011"}
+{"event": "output_validated", "fact_count": 9, "item_id": "news_011"}
+{"event": "run_completed", "item_id": "news_011"}
+{"event": "run_started", "item_id": "news_012"}
+{"event": "output_validated", "fact_count": 5, "item_id": "news_012"}
+{"event": "run_completed", "item_id": "news_012"}
+{"event": "run_started", "item_id": "news_013"}
+{"event": "output_validated", "fact_count": 7, "item_id": "news_013"}
+{"event": "run_completed", "item_id": "news_013"}
+{"event": "run_started", "item_id": "news_014"}
+{"event": "output_validated", "fact_count": 6, "item_id": "news_014"}
+{"event": "run_completed", "item_id": "news_014"}
+{"event": "run_started", "item_id": "news_015"}
+{"event": "output_validated", "fact_count": 7, "item_id": "news_015"}
+{"event": "run_completed", "item_id": "news_015"}
+{"event": "run_started", "item_id": "news_016"}
+{"event": "output_validated", "fact_count": 6, "item_id": "news_016"}
+{"event": "run_completed", "item_id": "news_016"}

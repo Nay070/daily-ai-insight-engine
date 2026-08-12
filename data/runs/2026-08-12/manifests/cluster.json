@@ -1,0 +1,18 @@
+{
+  "applied_merge_spec_count": 1,
+  "event_count": 15,
+  "input_item_count": 16,
+  "insight_path": "data/processed/2026-08-12/insights.jsonl",
+  "insight_sha256": "b4a4643b1a5a164e4d612f228b4ddf7d37807c8f9c5181b11d3682d8d84d0bfb",
+  "merge_spec_path": "data/decisions/2026-08-12.event-merges.json",
+  "merge_spec_sha256": "dff4000f9eedb4526fa86a80e23e3dd9360c138688f988eb676b34fe21dbecc4",
+  "merged_event_count": 1,
+  "methodology_version": "importance-v1",
+  "output_path": "data/processed/2026-08-12/events.jsonl",
+  "raw_path": "data/raw/2026-08-12.jsonl",
+  "raw_sha256": "60b73354bc5ad7d2d1238cf336893ab0c7df0c44b44c849ee95a86c607592931",
+  "report_date": "2026-08-12",
+  "schema_version": "1.0",
+  "skipped_merge_spec_count": 0,
+  "stage": "cluster"
+}
